@@ -1,0 +1,25 @@
+{
+  "name": "js-img2base64",
+  "version": "1.0.2",
+  "description": "Converts an image to Base64. You could pass a maximum size of an image, and an array of valid extensions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MurphyAdam/js-img2base64.git"
+  },
+  "keywords": [
+    "base64",
+    "image",
+    "convert",
+    "validate"
+  ],
+  "author": "Adam Clark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MurphyAdam/js-img2base64/issues"
+  },
+  "homepage": "https://github.com/MurphyAdam/js-img2base64#readme"
+}
