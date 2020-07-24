@@ -16,7 +16,7 @@ npm install js-img2base64 --save
 ```
 
 ## API
-### imageToBase64(imageFile, maxSizeInMegabytes, validExtenions)
+### imageToBase64(imageFile, maxSizeInMegabytes, validExtensions)
 
 Convert image file to image base64 data
 * {Image} ``imageFile``, required  

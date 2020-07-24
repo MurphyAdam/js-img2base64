@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-function isValidImage(image, maxSizeInMegabytes, validExtenions) {
+function isValidImage(image, maxSizeInMegabytes, validExtensions) {
   var extArray = ['png', 'jpeg', 'jpg', 'gif'];
-  if (validExtenions && validExtenions.length) extArray = validExtenions;
+  if (validExtensions && validExtensions.length) extArray = validExtensions;
   return new Promise(function (resolve, reject) {
     if (extArray.indexOf(image.type.split('/')[1]) !== -1) {
       var maxSizeInBytes = maxSizeInMegabytes * 1024 * 1024;
@@ -33,9 +33,9 @@ function getBase64Promise(file) {
 
 function imageToBase64(image) {
   var maxSizeInMegabytes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
-  var validExtenions = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  var validExtensions = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
   return new Promise(function (resolve, reject) {
-    isValidImage(image, maxSizeInMegabytes, validExtenions).then(function () {
+    isValidImage(image, maxSizeInMegabytes, validExtensions).then(function () {
       return resolve(getBase64Promise(image));
     }).catch(function (error) {
       return reject(error);
