@@ -1,5 +1,5 @@
 # js-img2base64
-Converts an image to Base64. You could pass a maximum size of an image, and an array of valid extensions. This package has no external dependecy packages.
+Converts an image to Base64. You could pass a maximum size of an image in megabytes, and an array of valid extensions. This package has no external dependency packages.
 ```js
 var imageToBase64 = require('js-img2base64');
 ```
@@ -20,8 +20,8 @@ npm install js-img2base64 --save
 
 Convert image file to image base64 data
 * {Image} ``imageFile``, required  
-* {number} optional, default <= 3 megabytes  
-* {array} optional, default ['png', 'jpeg', 'jpg', 'gif']
+* {number} ``maxSizeInMegabytes`` optional, default <= 3 megabytes  
+* {array} ``validExtensions`` optional, default ['png', 'jpeg', 'jpg', 'gif']
 ```js
 
     imageToBase64(image, 6, ["png", "gif"])
