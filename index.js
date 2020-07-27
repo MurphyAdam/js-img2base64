@@ -11,8 +11,10 @@ function isValidImage(image, maxSizeInMegabytes, validExtenions) {
   return new Promise(function (resolve, reject) {
     if (extArray.indexOf(image.type.split('/')[1]) !== -1) {
       var maxSizeInBytes = maxSizeInMegabytes * 1024 * 1024;
-      if (image.size <= maxSizeInBytes) resolve(true);else reject("Image ".concat(image.name, " is greater than ").concat(maxSizeInMegabytes, " megabytes."));
-    } else reject("Image ".concat(image.name, " is not a valid image format. (valid image formats are: ").concat(extArray.join(', '), ")"));
+      if (image.size <= maxSizeInBytes) resolve(true);
+      else reject("Image ".concat(image.name, " is greater than ").concat(maxSizeInMegabytes, " megabytes."));
+    } 
+    else reject("Image ".concat(image.name, " is not a valid image format. (valid image formats are: ").concat(extArray.join(', '), ")"));
   });
 }
 
@@ -34,7 +36,11 @@ function imageToBase64(image) {
   var validExtenions = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
   return new Promise(function (resolve, reject) {
     isValidImage(image, maxSizeInMegabytes, validExtenions).then(function () {
-      return resolve(getBase64Promise(image));
+      return getBase64Promise(image).then(function (result) {
+        return resolve(result);
+      }).catch(function (error) {
+        return reject(error);
+      });
     }).catch(function (error) {
       return reject(error);
     });
