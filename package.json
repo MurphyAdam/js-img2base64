@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/MurphyAdam/js-img2base64/issues"
   },
-  "homepage": "https://github.com/MurphyAdam/js-img2base64#readme"
+  "homepage": "https://github.com/MurphyAdam/js-img2base64#readme",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  }
 }
