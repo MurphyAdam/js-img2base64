@@ -1,8 +1,9 @@
-[![Version](https://img.shields.io/npm/v/js-img2base64.svg)] [![Downloads](https://img.shields.io/npm/dt/js-img2base64.svg)]
+[![Version](https://img.shields.io/npm/v/js-img2base64.svg)](https://www.npmjs.com/package/js-img2base64) 
+[![Downloads](https://img.shields.io/npm/dt/js-img2base64.svg)](https://www.npmjs.com/package/js-img2base64)
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=MurphyAdam&count_private=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 
-# js-img2base64
+# `js-img2base64`
 Converts an image to Base64. You could pass a maximum size of an image in megabytes, and an array of valid extensions. This package has no external dependency packages.
 
 ## Install
